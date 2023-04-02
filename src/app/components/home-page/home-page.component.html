@@ -1,21 +1,13 @@
-<p>Hola desde la Home Page!</p>
-
-<div class="navigation">
-    <ul>
-        <li><a routerLink="/features-page">Features</a></li>
-        <li><a routerLink="/carrer-page">Career</a></li>
-        <li><a routerLink="/video-page">Videos</a></li>
-
-        <li>
-            <button (click)="navigation.goBack()">
-                Back to {{ navigation.getPreviousUrl() }}
-            </button>
-        </li>
-    </ul>
+<div class="container">
+    <div *ngFor="let player of players">
+        <h2>{{ player.nombre }}</h2>
+        <a routerLink="/features-page/{{ player.id }}" class="card-link">
+            <img
+                style="width: 100%"
+                [src]="player.imagen + '.jpeg'"
+                alt="{{ player.nombre }}"
+                class="player-image"
+            />
+        </a>
+    </div>
 </div>
-
-<h3>History</h3>
-
-<span *ngFor="let url of navigation.getHistory(); let i = index">
-    {{ i }}={{ url }}
-</span>

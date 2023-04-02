@@ -8,7 +8,7 @@ import { FeaturesPageComponent } from "./components/features-page/features-page.
 import { VideoPageComponent } from "./components/video-page/video-page.component";
 import { CareerPageComponent } from "./components/career-page/career-page.component";
 import { NavigationService } from "./navigation.service";
-import { CardPlayerComponent } from './card-player/card-player.component';
+import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { CardPlayerComponent } from './card-player/card-player.component';
     FeaturesPageComponent,
     VideoPageComponent,
     CareerPageComponent,
-    CardPlayerComponent,
+    NavBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [NavigationService],
