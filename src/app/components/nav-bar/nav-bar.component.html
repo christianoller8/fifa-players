@@ -1,0 +1,17 @@
+<div class="navigation">
+    <ul class="nav-list">
+        <li><a routerLink="/features-page/:id">Features</a></li>
+        <li><a routerLink="/carrer-page/:id">Carrer</a></li>
+        <li><a routerLink="/video-features-page/:id">Videos</a></li>
+    </ul>
+    <div class="nav-button">
+        <button class="btn-lg" (click)="navigation.goBack()">Back</button>
+    </div>
+</div>
+
+<!--
+<h3>History</h3>
+<span *ngFor="let url of navigation.getHistory(); let i = index">
+    {{ i }}={{ url }}
+</span>
+-->
