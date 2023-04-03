@@ -1,33 +1,43 @@
 <div class="container">
     <div class="features-wrapper">
         <div class="image-wrapper">
-            <img
-                src="{{ player.imagen2 + '.jpeg' }}"
-                alt="{{ player.nombre }}"
-                class="player-image"
-                style="width: 70%"
-            />
+            <a routerLink=":id/video-page" class="card-link">
+                <img
+                    src="{{ player.imagen2 + '.jpeg' }}"
+                    alt="{{ player.nombre }}"
+                    class="player-image"
+                    style="width: 80%"
+                />
+            </a>
         </div>
         <div class="table-wrapper">
             <table>
-                <tr class="table-principal-text">
-                    <th>CARACTERISTICAS GENERALES</th>
+                <tr>
+                    <th class="table-principal-text">
+                        CARACTERISTICAS GENERALES
+                    </th>
                 </tr>
                 <tr>
-                    <td>filigranas</td>
+                    <td>Pierna buena</td>
+                    <p>{{ player.caracteristicasGenerales.piernaBuena }}</p>
                 </tr>
                 <tr>
-                    <td>pierna mala</td>
+                    <td>Rendimiento ATQ</td>
+                    <p>{{ player.caracteristicasGenerales.rendimientoAtq }}</p>
                 </tr>
                 <tr>
-                    <td>rendimiento ATQ</td>
+                    <td>Rendimiento DEF</td>
+                    <p>{{ player.caracteristicasGenerales.rendimientoDef }}</p>
                 </tr>
                 <tr>
-                    <td>rendimiento DEF</td>
+                    <td>Filigranas</td>
+                    <p>{{ player.caracteristicasGenerales.filigranas }}</p>
                 </tr>
                 <tr>
-                    <td>pierna buena</td>
+                    <td>Pierna Mala</td>
+                    <p>{{ player.caracteristicasGenerales.piernaMala }}</p>
                 </tr>
+
                 <tr>
                     <th>&nbsp;</th>
                 </tr>
@@ -37,19 +47,26 @@
                     </th>
                 </tr>
                 <tr>
-                    <td>acceleracion</td>
+                    <td>Acceleracion</td>
+                    <p>{{ player.caracteristicasEspecificas.aceleracion }}</p>
                 </tr>
                 <tr>
-                    <td>velocidad</td>
+                    <td>Velocidad</td>
+                    <p>{{ player.caracteristicasEspecificas.velocidad }}</p>
                 </tr>
                 <tr>
-                    <td>posicion</td>
+                    <td>Posicion</td>
+                    <p>{{ player.caracteristicasEspecificas.posicion }}</p>
                 </tr>
                 <tr>
-                    <td>finalizacion</td>
+                    <td>Finalizacion</td>
+                    <p>{{ player.caracteristicasEspecificas.finalizacion }}</p>
                 </tr>
                 <tr>
-                    <td>potencia</td>
+                    <td>Potencia</td>
+                    <p>
+                        {{ player.caracteristicasEspecificas.potenciaDeTiro }}
+                    </p>
                 </tr>
             </table>
         </div>

@@ -36,9 +36,12 @@ table {
     width: 100%;
 }
 
+td:nth-child(2) {
+    text-align: center;
+}
+
 th,
 td {
-    text-align: left;
     padding: 8px;
 }
 
@@ -53,4 +56,8 @@ tr:nth-child(even) {
 
 td {
     border-bottom: 1px solid #ddd;
+}
+
+div table tr th .table-principal-text {
+    color: red;
 }

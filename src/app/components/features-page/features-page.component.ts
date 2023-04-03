@@ -9,14 +9,17 @@ import { Player } from "../../interfaces/player.interface";
   templateUrl: "./features-page.component.html",
   styleUrls: ["./features-page.component.scss"],
 })
-export class FeaturesPageComponent {
+export class FeaturesPageComponent implements OnInit {
   player: Player = {} as Player;
+
   constructor(
     private router: Router,
     public navigation: NavigationService,
     private dataPlayers: DataPlayersService,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    this.navigation.startSaveHistory();
+  }
 
   ngOnInit(): void {
     this.getPlayer();
