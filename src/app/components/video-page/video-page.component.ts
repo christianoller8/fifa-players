@@ -47,6 +47,10 @@ export class VideoPageComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+  goNext() {
+    this.router.navigate(["carrer-page", this.player.id]);
+    console.log(this.player.id);
+  }
   goBack() {
     this.navigation.goBack();
   }

@@ -6,6 +6,7 @@ import { delay } from "rxjs";
 @Injectable()
 export class NavigationService {
   private history: string[] = [];
+  getNextUrl: any;
 
   constructor(private router: Router, private location: Location) {}
 
@@ -29,6 +30,10 @@ export class NavigationService {
     } else {
       this.router.navigateByUrl("/");
     }
+  }
+
+  public goNext(): void {
+    this.router.navigateByUrl(this.getNextUrl());
   }
 
   public getPreviousUrl(): string {
