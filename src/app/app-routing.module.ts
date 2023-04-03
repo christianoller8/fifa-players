@@ -4,28 +4,65 @@ import { FeaturesPageComponent } from "./components/features-page/features-page.
 import { CareerPageComponent } from "./components/career-page/career-page.component";
 import { VideoPageComponent } from "./components/video-page/video-page.component";
 import { HomePageComponent } from "./components/home-page/home-page.component";
+import { BreadcrumComponent } from "./components/breadcrum/breadcrum.component";
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home-page",
+    redirectTo: "/",
     pathMatch: "full",
   },
   {
-    path: "home-page",
-    component: HomePageComponent,
-  },
-  {
-    path: "features-page/:id",
-    component: FeaturesPageComponent,
-  },
-  {
-    path: "carrer-page/:id",
-    component: CareerPageComponent,
-  },
-  {
-    path: "video-page",
-    component: VideoPageComponent,
+    path: "",
+    data: {
+      breadcrumb: "home",
+    },
+    children: [
+      {
+        path: "",
+        component: HomePageComponent,
+        data: {
+          breadcrumb: null,
+        },
+      },
+      {
+        path: ":id/features-page",
+        data: {
+          breadcrumb: "Features",
+        },
+        children: [
+          {
+            path: "",
+            component: FeaturesPageComponent,
+            data: {
+              breadcrumb: null,
+            },
+          },
+          {
+            path: ":id/video-page",
+            data: {
+              breadcrumb: "Videos",
+            },
+            children: [
+              {
+                path: "",
+                component: VideoPageComponent,
+                data: {
+                  breadcrumb: null,
+                },
+              },
+              {
+                path: ":id/carrer-page",
+                component: CareerPageComponent,
+                data: {
+                  breadcrumb: "Career",
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
 ];
 

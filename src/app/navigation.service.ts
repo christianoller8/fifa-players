@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Location } from "@angular/common";
 import { Router, NavigationEnd } from "@angular/router";
+import { delay } from "rxjs";
 
 @Injectable()
 export class NavigationService {
@@ -36,5 +37,18 @@ export class NavigationService {
     }
 
     return "";
+  }
+
+  public async resetHistoryFromBreadcrumb() {
+    await delay(50);
+    const currentUrl = this.router.url;
+    this.history.pop();
+
+    while (
+      this.history.length > 0 &&
+      this.history[this.history.length - 1] !== currentUrl
+    ) {
+      this.history.pop();
+    }
   }
 }

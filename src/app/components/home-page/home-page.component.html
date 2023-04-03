@@ -1,7 +1,6 @@
 <div class="container">
     <div *ngFor="let player of players">
-        <h2>{{ player.nombre }}</h2>
-        <a routerLink="/features-page/{{ player.id }}" class="card-link">
+        <a routerLink="{{ player.id }}/features-page" class="card-link">
             <img
                 style="width: 100%"
                 [src]="player.imagen + '.jpeg'"
