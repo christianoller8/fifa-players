@@ -47,12 +47,10 @@ export class DataPlayersService {
       imagen: "../assets/img/Haaland/portada-haaland",
       imagen2: "../assets/img/Haaland/caracteristicas-haaland",
       videos: {
-        video1: "https://www.youtube.com/watch?v=Udm-YGrRV7k&ab_channel=CNSHD",
-        video2:
-          "https://www.youtube.com/watch?v=gUx4KQi40M0&ab_channel=Ronnie7M",
-        video3: "https://www.youtube.com/watch?v=ZaOYdeytctk&ab_channel=Dezu7",
-        video4:
-          "https://www.youtube.com/watch?v=SK_44pTfc30&ab_channel=TEC97_Xmax",
+        video1: "7GRFf9JHOVA",
+        video2: "7GRFf9JHOVA",
+        video3: "7GRFf9JHOVA",
+        video4: "7GRFf9JHOVA",
       },
       puntuacion: 88,
       posicionAbrv: "DEL",

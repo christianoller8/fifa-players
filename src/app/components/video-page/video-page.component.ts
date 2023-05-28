@@ -18,7 +18,8 @@ import { YouTubePlayer } from "@angular/youtube-player";
   styleUrls: ["./video-page.component.scss"],
 })
 export class VideoPageComponent implements OnInit, AfterViewInit, OnDestroy {
-  player: Player = {} as Player;
+  players: Player[] = [];
+
   selectedPlayer: Player = {} as Player;
   playerService: any;
   @ViewChild("demoYouTubePlayer")
@@ -32,35 +33,24 @@ export class VideoPageComponent implements OnInit, AfterViewInit, OnDestroy {
     private dataPlayers: DataPlayersService,
     private route: ActivatedRoute,
     private _changeDetectorRef: ChangeDetectorRef
-  ) {}
+  ) {
+    console.log(this.players);
+  }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get("id"));
-    this.dataPlayers.getPlayer(id).subscribe((player) => {
-      this.player = player;
-      this.videoWidth = Math.min(
-        this.demoYouTubePlayer.nativeElement.clientWidth,
-        1200
-      );
-      this.videoHeight = this.videoWidth * 0.6;
-      this._changeDetectorRef.detectChanges();
-    });
+    this.players = this.dataPlayers.getPlayers();
   }
 
-  goNext() {
-    this.router.navigate(["carrer-page", this.player.id]);
-    console.log(this.player.id);
-  }
   goBack() {
     this.navigation.goBack();
   }
 
-  getPlayer(): void {
-    const id = Number(this.route.snapshot.paramMap.get("id"));
-    this.dataPlayers
-      .getPlayer(id)
-      .subscribe((player) => (this.player = player));
-  }
+  // getPlayer(): void {
+  //   const id = Number(this.route.snapshot.paramMap.get("id"));
+  //   this.dataPlayers
+  //     .getPlayer(id)
+  //     .subscribe((player) => (this.player = player));
+  // }
 
   ngAfterViewInit(): void {
     this.onResize();

@@ -14,49 +14,35 @@ const routes: Routes = [
   },
   {
     path: "",
-    data: {
-      breadcrumb: "home",
-    },
+
     children: [
       {
         path: "",
         component: HomePageComponent,
-        data: {
-          breadcrumb: null,
-        },
       },
       {
         path: ":id/features-page",
-        data: {
-          breadcrumb: "Features",
-        },
         children: [
           {
             path: "",
             component: FeaturesPageComponent,
-            data: {
-              breadcrumb: null,
-            },
           },
           {
             path: ":id/video-page",
-            data: {
-              breadcrumb: "Videos",
-            },
             children: [
               {
                 path: "",
-                component: VideoPageComponent,
-                data: {
-                  breadcrumb: null,
-                },
+                component: VideoPageComponent
               },
               {
                 path: ":id/carrer-page",
                 component: CareerPageComponent,
-                data: {
-                  breadcrumb: "Career",
-                },
+                children: [
+                  {
+                    path: "",
+                    component: BreadcrumComponent,
+                  },
+                ],
               },
             ],
           },

@@ -11,7 +11,7 @@ import { NavigationService } from "./navigation.service";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { BreadcrumComponent } from "./components/breadcrum/breadcrum.component";
 import { YouTubePlayerModule } from "@angular/youtube-player";
-import { FooterComponent } from './components/footer/footer.component';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
   declarations: [

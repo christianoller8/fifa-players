@@ -6,42 +6,17 @@
 </div>
 <br />
 <div #demoYouTubePlayer class="demo-youtube-player">
-    <section>
-        <youtube-player
-            videoId="2__7lebV8ZM"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-            [startSeconds]="4"
-            [endSeconds]="8"
-        >
-        </youtube-player>
-        <youtube-player
-            videoId="7hNoyJ7whHg"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-            [startSeconds]="4"
-            [endSeconds]="8"
-        >
-        </youtube-player>
-        <youtube-player
-            videoId="QOytHcQOn0U"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-            [startSeconds]="4"
-            [endSeconds]="8"
-        >
-        </youtube-player>
-        <youtube-player
-            videoId="XA9qswecYw4"
-            suggestedQuality="highres"
-            [height]="250"
-            [width]="500"
-            [startSeconds]="4"
-            [endSeconds]="8"
-        >
-        </youtube-player>
-    </section>
+    <div>
+        <section *ngFor="let player of players">
+            <youtube-player
+                videoId="{{ player.videos }}"
+                suggestedQuality="highres"
+                [height]="250"
+                [width]="500"
+                [startSeconds]="4"
+                [endSeconds]="8"
+            >
+            </youtube-player>
+        </section>
+    </div>
 </div>
