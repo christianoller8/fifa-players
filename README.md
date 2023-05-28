@@ -20,23 +20,6 @@ This project is focused on learning and training. The purpose is to create compo
 For this project, I have chosen the 4 most valued players of the moment which are Kylian Mbappe, Eerling Haaland, Vinicius Jr and Pedri. I have displayed a home page with characteristic pictures of each one on which you can click and go to their characteristics, videos and career path in that order.
 I hope you enjoy watching it as much as I have enjoyed creating it, thank you very much!
 
-## Mockups
-
-#### Home Page
-
-<img src="./src/assets/img/PA%CC%81GINA-1.png" width="450" >
-
-#### Features Page
-
-<img src="./src/assets/img/PA%CC%81GINA-2.png" width="450" >
-
-#### Video Page
-
-<img src="./src/assets/img/PA%CC%81GINA-3.png" width="450" >
-
-#### Carrer Page
-
-<img src="./src/assets/img/PA%CC%81GINA-4.png" width="450" >
 
 ## Final Result
 
