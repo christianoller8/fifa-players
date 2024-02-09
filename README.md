@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
 </p>
 
-## TopRatedPlayers 22/23
+## TopRatedPlayers 22/23 
 
 
 This project is focused on learning and training. The purpose is to create components, communicate with each other and incorporate buttons to go forward and backward while visualizing breadcrums.
